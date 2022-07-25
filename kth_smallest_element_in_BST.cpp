@@ -21,8 +21,8 @@
 int kthSmallest(TreeNode<int> *root, int& k)
 {
 	if(root == NULL) return -1;
-    int right = kthSmallest(root->left, k);
-    if(right!=-1)
+    int left = kthSmallest(root->left, k);
+    if(left!=-1)
         return right;
     k--;
     if(k==0)
